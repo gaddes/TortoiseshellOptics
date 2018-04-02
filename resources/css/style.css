@@ -49,7 +49,7 @@ body {
   padding-right: 1rem;
 }
 
-.navbar ul {
+ul {
   display: flex;
   justify-content: space-between;
 
@@ -57,8 +57,12 @@ body {
   padding-right: 1rem;
 }
 
-.navbar li {
+li {
   padding: 0 1rem;
+}
+
+.mobile-navbar {
+  display: none;
 }
 
 .mainimage .container .flex { /* This is required so that 'align-self: flex-end;' can be used on '.headline' to ensure that it aligns with the right-hand edge of the container. */
@@ -83,6 +87,7 @@ body {
 .services .container {
   display: flex;
   justify-content: center;
+  padding: 3rem 0;
 }
 
 .service {
@@ -90,7 +95,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 0 3rem;
   width: 5rem;
   height: 8rem;
 }
@@ -143,4 +148,108 @@ footer .container {
 footer img {
   height: 1.5rem;
   padding-right: 1rem;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  /* Site container spans full-width */
+  .container { max-width: 100%; }
+
+  /* Titlebar snaps to top of screen */
+  .titlebar { top: 0; }
+
+  /* Reduce height of main image */
+  .mainimage { height: 22rem; }
+
+  /* Adjust position and dimensions of headline */
+  .headline {
+    top: 5rem;
+    right: 2rem;
+    padding: 1.5rem 4rem;
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 641px) {
+  /* Remove text from companylogo */
+  .companylogo span {
+    display: none;
+  }
+
+  /* Adjust background image position */
+  .mainimage {
+    background-position: 20%;
+  }
+
+  /* Reduce height of main image */
+  .mainimage { height: 17rem; }
+
+  /* Adjust position and dimensions of headline */
+  .headline {
+    top: 9rem;
+    right: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Replace navbar with mobile-navbar */
+  .navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: inline-block;
+  }
+
+  /* Position services items */
+  .services .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    font-size: 0.77rem;
+    margin: 1.54rem 0;
+    height: auto;
+  }
+
+  .service span {
+    margin-top: 1rem;
+  }
+
+  /* Company info span 100% screen width */
+  .companyinfo .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .item {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .companyinfo h2 {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .companyinfo p {
+    padding: 0 0.5rem;
+    font-size: 0.77rem;
+  }
+
+  /* Remove copyright text in footer */
+  footer span {
+    display: none;
+  }
+
+  /* Center image in footer */
+  footer .flex {
+    justify-content: center;
+  }
 }
