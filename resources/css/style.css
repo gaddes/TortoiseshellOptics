@@ -1,0 +1,146 @@
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Main Image & Header */
+
+.mainimage {
+  height: 31rem;
+  background-image: url("../images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: 1rem;
+  background-color: cadetblue;
+}
+
+.companylogo {
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 1rem 1rem 2rem;
+  color: white;
+}
+
+.companylogo img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+  padding-right: 1rem;
+}
+
+.navbar li {
+  padding: 0 1rem;
+}
+
+.mainimage .container .flex { /* This is required so that 'align-self: flex-end;' can be used on '.headline' to ensure that it aligns with the right-hand edge of the container. */
+  flex-direction: column;
+}
+
+.headline {
+  position: relative;
+  top: 11rem;
+  right: -2rem;
+  padding: 1.5rem 5rem;
+  align-self: flex-end;
+
+  background-color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Services */
+
+.services .container {
+  display: flex;
+  justify-content: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  width: 5rem;
+  height: 8rem;
+}
+
+.service span {
+  text-align: center;
+}
+
+.landscape {
+  width: 5rem;
+}
+
+.portrait {
+  width: 3.5rem;
+}
+
+/* Company Info */
+
+.companyinfo .container {
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.item {
+  width: 35%;
+  margin: 0 2.5%;
+}
+
+.item h2 {
+  width: 10rem;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  background-color: cadetblue;
+  color: white;
+  font-weight: bold;
+}
+
+.item p {
+  margin-top: 1rem;
+}
+
+/* Footer */
+
+footer .container {
+  background-color: azure;
+  padding: 4rem;
+
+  align-items: center;
+}
+
+footer img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
